@@ -1,17 +1,18 @@
 package com.huydong.leetcode;
 
-import com.huydong.leetcode.two_sum.TwoSumSolution;
-
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import com.huydong.leetcode.add_two_numbers.AddTwoNumbersSolution;
+import com.huydong.leetcode.add_two_numbers.ListNode;
 
 public class Main {
     public static void main(String[] args) {
-        TwoSumSolution twoSumSolution =new TwoSumSolution();
-        int [] test = Arrays.stream(List.of(3,2,4).toArray()).mapToInt(n -> (int) n).toArray();
-        int [] result = twoSumSolution.twoSum(test, 6);
-        System.out.println(result[0] +" "+ result[1]);
+        AddTwoNumbersSolution addTwoNumbersSolution =new AddTwoNumbersSolution();
+        ListNode l1 = new ListNode(2, new ListNode(4, new ListNode(3)));
+        ListNode l2 = new ListNode(3, new ListNode(0));
+        ListNode result = addTwoNumbersSolution.addTwoNumbers(l1, l2);
+        while (result!= null){
+            System.out.println(result.val);
+            result = result.next;
+        }
+
     }
 }
