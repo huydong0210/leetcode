@@ -1,4 +1,4 @@
-package com.huydong.leetcode.add_two_numbers;
+package com.huydong.leetcode.medium.add_two_numbers;
 
 public class ListNode {
     public int val;

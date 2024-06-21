@@ -1,4 +1,4 @@
-package com.huydong.leetcode.two_sum;
+package com.huydong.leetcode.easy.two_sum;
 
 public class TwoSumSolution {
     public int[] twoSum(int[] nums, int target) {
