@@ -1,14 +1,16 @@
 package com.huydong.leetcode;
 
-import com.huydong.leetcode.easy.longest_common_prefix.LongestCommonPrefixSolution;
-import com.huydong.leetcode.easy.palindrome_number.PalindromeNumberSolution;
-import com.huydong.leetcode.easy.roman_to_integer.RomanToIntegerSolution;
-import com.huydong.leetcode.medium.add_two_numbers.ListNode;
-import com.huydong.leetcode.medium.longest_substring_without_repeating_characters.LongestSubstringWithoutRepeatingCharactersSolution;
+import com.huydong.leetcode.easy.remove_duplicates_from_sorted_array.RemoveDuplicatesFromSortedArraySolution;
 
 public class Main {
     public static void main(String[] args) {
-        LongestCommonPrefixSolution solution = new LongestCommonPrefixSolution();
-        System.out.println(solution.longestCommonPrefix(new String[]{"dog","racecar","car"}));
+        RemoveDuplicatesFromSortedArraySolution solution = new RemoveDuplicatesFromSortedArraySolution();
+        int[] arr = new int[]{1,1,2};
+        int result = solution.removeDuplicates(arr);
+        for (int i=0 ; i<result; i++){
+            System.out.print(arr[i] + " ");
+        }
+
+        System.out.println("- " + result);
     }
 }
