@@ -1,4 +1,4 @@
-package com.huydong.leetcode.hard;
+package com.huydong.leetcode.hard.merge_k_sorted_lists_solution;
 
 import com.huydong.leetcode.medium.add_two_numbers.ListNode;
 
