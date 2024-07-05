@@ -49,33 +49,4 @@ public class FourSumSolution {
         }
         return result;
     }
-
-//    private int[] sort(int nums[]) {
-//        if (nums.length == 0) {
-//            return nums;
-//        }
-//        int min = nums[0];
-//        int max = nums[0];
-//        int[] result = new int[nums.length];
-//        for (int i = 0; i < nums.length; i++) {
-//            min = min < nums[i] ? min : nums[i];
-//            max = max > nums[i] ? max : nums[i];
-//        }
-//        int[] index = new int[max - min + 1];
-//        for (int i = 0; i < index.length; i++) {
-//            index[i] = 0;
-//        }
-//        for (int i = 0; i < nums.length; i++) {
-//            index[nums[i] - min] += 1;
-//        }
-//        for (int i = 1; i < index.length; i++) {
-//            index[i] += index[i - 1];
-//        }
-//        for (int i = 0; i < nums.length; i++) {
-//            result[index[nums[i] - min] - 1] = nums[i];
-//            index[nums[i] - min] -= 1;
-//        }
-//        return result;
-//
-//    }
 }
