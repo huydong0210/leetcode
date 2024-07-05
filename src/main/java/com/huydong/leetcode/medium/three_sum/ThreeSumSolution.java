@@ -5,7 +5,7 @@ import java.util.*;
 public class ThreeSumSolution {
     public List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
-        sortNums(nums);
+        nums = sortNums(nums);
 //        boolean isExistThreeZero = false;
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] > 0) {
@@ -34,16 +34,31 @@ public class ThreeSumSolution {
         return result;
     }
 
-    private void sortNums(int[] nums) {
-        int tmp;
-        for (int i = 0; i < nums.length - 1; i++) {
-            for (int j = i + 1; j < nums.length; j++) {
-                if (nums[i] > nums[j]) {
-                    tmp = nums[i];
-                    nums[i] = nums[j];
-                    nums[j] = tmp;
-                }
-            }
+    public int[] sortNums(int[] nums) {
+        if (nums.length == 0) {
+            return nums;
         }
+        int min = nums[0];
+        int max = nums[0];
+        for (int i = 0; i < nums.length; i++) {
+            min = min > nums[i] ? nums[i] : min;
+            max = max < nums[i] ? nums[i] : max;
+        }
+        int[] index = new int[max - min + 1];
+        for (int i = 0; i < index.length; i++) {
+            index[i] = 0;
+        }
+        for (int i = 0; i < nums.length; i++) {
+            index[nums[i] - min] += 1;
+        }
+        for (int i = 1; i < index.length; i++) {
+            index[i] = index[i] + index[i - 1];
+        }
+        int[] result = new int[nums.length];
+        for (int i = 0; i < nums.length; i++) {
+            result[index[nums[i] - min] - 1] = nums[i];
+            index[nums[i] - min] -= 1;
+        }
+        return result;
     }
 }
