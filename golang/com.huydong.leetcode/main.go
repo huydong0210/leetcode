@@ -2,9 +2,9 @@ package main
 
 import (
 	"fmt"
-	"golang/com.huydong.leetcode/easy"
+	int2 "golang/com.huydong.leetcode/easy/roman_to_int"
 )
 
 func main() {
-	fmt.Println(easy.RomanToInt("MCMXCIV"))
+	fmt.Println(int2.RomanToInt("MCMXCIV"))
 }

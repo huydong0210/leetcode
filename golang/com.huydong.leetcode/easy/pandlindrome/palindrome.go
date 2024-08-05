@@ -1,4 +1,4 @@
-package easy
+package pandlindrome
 
 func IsPalindrome(x int) bool {
 	if x < 0 {
